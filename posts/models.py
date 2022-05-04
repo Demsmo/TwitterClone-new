@@ -1,7 +1,3 @@
-from email.mime import image
-from re import T
-from tkinter.tix import Tree
-from turtle import Turtle
 from django.db import models
 from cloudinary.models import CloudinaryField
 

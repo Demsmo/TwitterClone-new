@@ -1,9 +1,5 @@
-from urllib import request
-from django import forms
-
 from django.shortcuts import render
-
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import  HttpResponseRedirect
 from .models import Post
 from .forms import PostForm
 
@@ -24,7 +20,7 @@ def index(request):
             return HttpResponseRedirect(form.erros.as_jsonn())
 
     # get all posts, limit = 20
-    posts = Post.objects.all()[:20]
+    posts = Post.objects.all().order_by("-created_at")[:20]
 
     # Show
     return render(request, 'posts.html',
