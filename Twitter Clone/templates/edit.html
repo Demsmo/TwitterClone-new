@@ -2,16 +2,17 @@
 
 <section class="content">
     <section class="heading">
-    <img src="/static/img/techis-logo.png" class="logo" />
-    <h1>Edit</h1>
-  
-</section>
+      <img src="/static/img/techis-logo.png" class="logo" />
+      <h1>Edit</h1>
+    </section>
   <section class="edit_form">
-    <form action="/edit/{{post.id}}/" method="POST">
+    <form action="/edit/{{post.id}}/" method="POST" enctype="multipart/form-data">
       {% csrf_token %}
         <input type="text" name="name" value="{{post.name}}"/>
         <input id="edit-body" name="body" value="{{post.body}}" required/>
+        {% if post.image.url %}
         <img src="{{post.image.url}}" alt="">
+        {% endif %}
         <div>
             <input
               type="file"

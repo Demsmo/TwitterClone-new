@@ -1,7 +1,9 @@
+from email.mime import image
 from re import T
 from tkinter.tix import Tree
 from turtle import Turtle
 from django.db import models
+from cloudinary.models import CloudinaryField
 
 class Post(models.Model):
     class Meta(object):
@@ -19,5 +21,9 @@ class Post(models.Model):
     likes= models.PositiveBigIntegerField(
         "like", default = 0, db_index=True, blank=True
     )
+    image = CloudinaryField(
+        "image", blank=True, db_index=True
+    )
+
     def __str__(self):
         return self.name

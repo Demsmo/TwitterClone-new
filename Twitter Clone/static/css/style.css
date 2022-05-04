@@ -16,20 +16,20 @@ body {
 }
 
 .heading {
-    padding: 30px;
-    display: block;
-    position: relative;
+    justify-content: left;
+    align-items: center;
+    display: flex;
 }
 
 img.logo {
-    height: 100px;
-    top: 0%;
-    left: 0%;
+    width: 50px;
 }
 
 h1 {
-    top: 8%;
-    left: 5%;
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 0%;
+    font-weight: bold;
 }
 
 input#myFile {
@@ -119,4 +119,52 @@ Post
     .posts li .name_body .name {
         font-size: 20px;
     }
+}
+
+.edit_form {
+    padding: 20px 27px;
+    border-bottom: #ccc 1px solid;
+}
+
+.edit_form input {
+    width: 80%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: rgb(29, 161, 242);
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+#edit-body {
+    background-color: white;
+    color: black;
+    font-weight: lighter;
+}
+
+input#update {
+    position: absolute;
+  width: 6%;
+  margin-left: 1%;
+  border: 0;
+  border-radius: 5px;
+  margin-top: 1%;
+}
+
+input#cancel {
+    position: absolute;
+    width: 6%;
+    margin-left: 9%;
+    border: 0;
+    border-radius: 5px;
+    margin-top: 1%; 
+}
+
+input#edit-file {
+    width: 40%;
+  margin-top: 2%;
+  background-color: #ccc;
+  border: 0;
+  border-radius: 5px;
 }
